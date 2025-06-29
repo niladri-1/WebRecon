@@ -8,7 +8,6 @@
 [![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](https://linux.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/niladri-1/WebRecon?style=for-the-badge&logo=github)](https://github.com/niladri-1/WebRecon/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/niladri-1/WebRecon?style=for-the-badge&logo=github)](https://github.com/niladri-1/WebRecon/network)
 
 **Advanced Web Reconnaissance Tool for Cybersecurity Professionals**
 
@@ -22,235 +21,274 @@
 
 WebRecon is a powerful, all-in-one web reconnaissance tool designed for cybersecurity professionals, penetration testers, and security researchers. It automates the process of gathering critical information about web targets, identifying potential vulnerabilities, and generating comprehensive reports.
 
-## ✨ Features
+<div align="center">
+  <img src="./demo.png" alt="WebRecon Demo" width="700"/>
+</div>
 
-### 🔍 **Information Gathering**
-- **DNS Resolution & Analysis** - Resolve IP addresses and enumerate DNS records
-- **WHOIS Lookup** - Retrieve domain registration information
-- **Geolocation Detection** - Identify server location and ISP details
-- **HTTP Header Analysis** - Extract server and security header information
+---
 
-### 🌐 **Network Reconnaissance**
-- **Port Scanning** - Scan common ports with multi-threaded efficiency
-- **Subdomain Enumeration** - Discover subdomains using wordlist techniques
-- **Service Detection** - Identify services running on open ports
+## ✨ Key Features
 
-### 💻 **Web Application Analysis**
-- **Technology Detection** - Identify web technologies, frameworks, and CMS
-- **Directory Enumeration** - Discover hidden directories and files
-- **SSL/TLS Certificate Analysis** - Examine SSL certificates and configurations
+<div align="center">
 
-### 🛡️ **Security Assessment**
-- **Vulnerability Assessment** - Identify common security misconfigurations
-- **Security Header Analysis** - Check for missing security headers
-- **Information Disclosure Detection** - Find exposed sensitive information
+| 🔍 Information Gathering | 🌐 Network Reconnaissance | 💻 Web Analysis | 🛡️ Security Assessment |
+|:------------------------:|:-------------------------:|:--------------:|:----------------------:|
+| DNS Resolution & Analysis | Port Scanning | Technology Detection | Vulnerability Assessment |
+| WHOIS Lookup | Subdomain Enumeration | Directory Enumeration | Security Header Analysis |
+| Geolocation Detection | Service Detection | SSL/TLS Certificate Analysis | Information Disclosure Detection |
+| HTTP Header Analysis | Network Mapping | CMS Detection | Configuration Analysis |
 
-### 📊 **Reporting**
-- **Comprehensive Reports** - Generate detailed Markdown reports
-- **JSON Data Export** - Export raw scan data for further analysis
-- **Organized Results** - Timestamped results with structured output
+</div>
 
-## 🚀 Installation
+### 📊 Advanced Capabilities
+
+**Information Gathering**
+- DNS resolution with comprehensive record enumeration
+- WHOIS data extraction and analysis
+- Geolocation identification with ISP details
+- HTTP header extraction and security analysis
+
+**Network Reconnaissance**
+- Multi-threaded port scanning for efficiency
+- Intelligent subdomain discovery using wordlist techniques
+- Service fingerprinting on discovered ports
+- Network topology mapping
+
+**Web Application Analysis**
+- Advanced technology stack identification
+- Hidden directory and file discovery
+- SSL/TLS certificate validation and analysis
+- CMS and framework detection
+
+**Security Assessment**
+- Automated vulnerability scanning
+- Security misconfiguration detection
+- Missing security header identification
+- Information leakage analysis
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.6 or higher
-- Linux/Unix operating system
-- Required system tools: `curl`, `dig`, `whois`, `openssl`
-
-### Install Dependencies
 ```bash
-# Update system packages
-sudo apt update
+# System Requirements
+- Python 3.6+
+- Linux/Unix OS
+- 512MB RAM minimum
+- 100MB disk space
+```
 
-# Install required system tools
-sudo apt install curl dnsutils whois openssl
+### Installation
+```bash
 
-# Clone the repository
+# 1. Clone repository
 git clone https://github.com/niladri-1/WebRecon.git
 cd WebRecon
 
-# Make the script executable
+
+# 2. Update system packages
+sudo apt update && sudo apt install curl dnsutils whois openssl
+
+
+# 3. Make executable
 chmod +x webrecon.py
+
+# 4. Run WebRecon
+python3 webrecon.py
 ```
 
-## 🔧 Usage
+---
 
-### Basic Usage
+## 🔧 Usage Guide
+
+### Interactive Menu Options
+
+<div align="center">
+
+| Option | Function | Description |
+|:------:|:--------:|:------------|
+| 1 | Full Reconnaissance | Complete automated security scan |
+| 2 | Basic Info Gathering | IP resolution, DNS, and headers |
+| 3 | Port Scanning | Network port discovery and analysis |
+| 4 | Subdomain Enumeration | Subdomain discovery and mapping |
+| 5 | Technology Detection | Web technology stack identification |
+| 6 | Directory Enumeration | Hidden resource discovery |
+| 7 | SSL/TLS Analysis | Certificate and encryption analysis |
+| 8 | DNS Enumeration | Comprehensive DNS record analysis |
+| 9 | Vulnerability Assessment | Security weakness identification |
+| 10 | Generate Report | Detailed reporting and documentation |
+
+</div>
+
+### Example Usage
 ```bash
 # Run WebRecon
-python3 webrecon.py
-
-# Or run directly
 ./webrecon.py
-```
 
-### Interactive Menu
-WebRecon provides an intuitive interactive menu with the following options:
-
-1. **Full Reconnaissance** - Complete automated scan
-2. **Basic Info Gathering** - IP, DNS, and basic headers
-3. **Port Scanning** - Scan for open ports
-4. **Subdomain Enumeration** - Find subdomains
-5. **Technology Detection** - Identify web technologies
-6. **Directory Enumeration** - Find hidden directories
-7. **SSL/TLS Analysis** - SSL certificate information
-8. **DNS Enumeration** - DNS records analysis
-9. **Vulnerability Assessment** - Basic security checks
-10. **Generate Report** - Create detailed reports
-
-### Example Commands
-```bash
-# Example target input
+# Enter target (supports multiple formats)
 Enter target URL: https://example.com
 # or
 Enter target URL: example.com
+# or
+Enter target URL: 192.168.1.1
 ```
+
+---
 
 ## 📁 Output Structure
 
 ```
 results/
 └── scan_20241129_143022/
-    ├── README.md          # Comprehensive report
-    └── scan_data.json     # Raw scan data
+    ├── README.md              # 📄 Comprehensive report
+    ├── scan_data.json         # 📊 Raw scan data
+    ├── vulnerabilities.json   # 🛡️ Security findings
+    └── technologies.json      # 💻 Technology stack
 ```
-
-## 🔍 Scan Modules
-
-### Port Scanning
-- Scans common ports (21, 22, 23, 25, 53, 80, 443, etc.)
-- Multi-threaded for faster results
-- Service identification
-
-### Subdomain Enumeration
-- Uses common subdomain wordlist
-- Concurrent DNS resolution
-- IP address mapping
-
-### Technology Detection
-- Identifies CMS (WordPress, Joomla, Drupal)
-- Web servers (Apache, Nginx, IIS)
-- Frameworks (Laravel, Django, React, etc.)
-- Programming languages (PHP, ASP.NET)
-
-### Directory Enumeration
-- Common directory wordlist
-- HTTP status code analysis
-- Hidden resource discovery
-
-### Security Analysis
-- Missing security headers detection
-- Information disclosure checks
-- Basic vulnerability assessment
-
-## 🛠️ Technical Details
-
-### System Requirements
-- **OS**: Linux/Unix (Ubuntu, Debian, CentOS, etc.)
-- **Python**: 3.6+
-- **Memory**: 512MB RAM minimum
-- **Disk**: 100MB free space
-
-### Dependencies
-- `subprocess` - System command execution
-- `socket` - Network operations
-- `ssl` - SSL/TLS analysis
-- `json` - Data serialization
-- `threading` - Concurrent operations
-- `urllib.parse` - URL parsing
-
-### Network Tools
-- `curl` - HTTP requests and header analysis
-- `dig` - DNS queries and record enumeration
-- `whois` - Domain registration information
-- `openssl` - SSL certificate analysis
-
-## 📊 Sample Report
-
-```markdown
-# Web Reconnaissance Report
-
-**Target URL:** https://example.com
-**Target Domain:** example.com
-**Scan Date:** 2024-11-29 14:30:22
-
-## 🔍 Basic Information
-**IP Address:** 93.184.216.34
-**Location:** Norwell, United States
-**ISP:** Edgecast
-
-## 🔓 Open Ports
-| Port | Service |
-|------|---------|
-| 80   | HTTP    |
-| 443  | HTTPS   |
-
-## 💻 Technologies Detected
-- Apache Server
-- PHP
-- WordPress
-```
-
-## 🎨 Features Highlight
-
-### 🎯 **Multi-threaded Performance**
-- Concurrent port scanning
-- Parallel subdomain enumeration
-- Efficient resource utilization
-
-### 🔒 **Security Focused**
-- Security header analysis
-- SSL/TLS certificate validation
-- Vulnerability identification
-
-### 📈 **Comprehensive Reporting**
-- Markdown formatted reports
-- JSON data export
-- Timestamped results
-
-### 🌈 **User-Friendly Interface**
-- Colorized terminal output
-- Interactive menu system
-- Progress indicators
-
-## ⚠️ Legal Disclaimer
-
-This tool is intended for authorized penetration testing and security research purposes only. Users are responsible for complying with applicable laws and regulations. Only use this tool on systems you own or have explicit permission to test.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Guidelines
-- Follow PEP 8 style guidelines
-- Add comments for complex logic
-- Test thoroughly before submitting
-- Update documentation as needed
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Links
-
-- **GitHub Repository**: [https://github.com/niladri-1/WebRecon](https://github.com/niladri-1/WebRecon)
-- **Issues**: [https://github.com/niladri-1/WebRecon/issues](https://github.com/niladri-1/WebRecon/issues)
-- **Releases**: [https://github.com/niladri-1/WebRecon/releases](https://github.com/niladri-1/WebRecon/releases)
-
-## 📧 Contact
-
-For questions, suggestions, or collaboration opportunities, please open an issue on GitHub.
 
 ---
 
+## 🔍 Core Modules
+
 <div align="center">
 
-**⭐ If you found this tool useful, please consider giving it a star! ⭐**
-
-[![GitHub stars](https://img.shields.io/github/stars/niladri-1/WebRecon?style=social)](https://github.com/niladri-1/WebRecon/stargazers)
+| 🔌 Port Scanning Engine | 🌐 Subdomain Discovery | 💻 Technology Detection | 🛡️ Security Analysis |
+|:------------------------:|:----------------------:|:-----------------------:|:--------------------:|
+| **Common Ports Scanned** | **DNS-Based Enumeration** | **CMS Detection** | **Header Analysis** |
+| 21, 22, 23, 25, 53, 80 | Comprehensive wordlists | WordPress, Joomla, Drupal | Security headers validation |
+| 443, 993, 995, 3389 | Parallel resolution | Magento, PrestaShop | Missing headers detection |
+| 5432, 3306, 8080, 8443 | IP correlation mapping | | |
+| | | | |
+| **Multi-threaded Performance** | **Geographic Distribution** | **Web Servers** | **SSL/TLS Assessment** |
+| Concurrent scanning | Active subdomain verification | Apache, Nginx, IIS | Certificate validation |
+| Service identification | DNS record enumeration | LiteSpeed, Caddy | Cipher analysis |
+| Version detection | | | Configuration review |
+| | | | |
+| **Output Format** | **Validation Process** | **Frameworks & Languages** | **Vulnerability Detection** |
+| Organized port status | Real-time verification | Laravel, Django, React | Common web vulnerabilities |
+| Service mapping | Response code analysis | Angular, Vue.js, PHP | Misconfiguration detection |
+| Banner grabbing | Timeout handling | Python, Java, ASP.NET | Information disclosure |
+| | | Node.js, Databases | OWASP Top 10 checks |
 
 </div>
 
 ---
 
-*Made with ❤️ by [niladri-1](https://github.com/niladri-1)*
+## 📊 Sample Report Output
+
+# 🕸️ WebRecon Security Assessment Report
+
+**Target**: https://example.com
+**Domain**: example.com
+**Scan Date**: 2024-11-29 14:30:22
+**Duration**: 2m 34s
+
+## 🔍 Target Information
+| Property | Value |
+|----------|-------|
+| **IP Address** | 93.184.216.34 |
+| **Location** | Norwell, United States |
+| **ISP** | Edgecast |
+| **Server** | Apache/2.4.41 |
+
+## 🔓 Network Analysis
+| Port | Service | Status | Version |
+|------|---------|--------|---------|
+| 22   | SSH     | Open   | OpenSSH 8.2 |
+| 80   | HTTP    | Open   | Apache 2.4.41 |
+| 443  | HTTPS   | Open   | Apache 2.4.41 |
+
+## 💻 Technology Stack
+- **CMS**: WordPress 6.3.1
+- **Server**: Apache 2.4.41
+- **Language**: PHP 8.1
+- **Database**: MySQL (detected)
+
+## 🛡️ Security Findings
+⚠️ **Medium Risk**: Missing X-Frame-Options header
+⚠️ **Low Risk**: Server version disclosure
+✅ **Good**: HTTPS properly configured
+
+---
+
+## 🎨 Advanced Features
+
+<div align="center">
+
+### 🎯 Performance Optimizations
+Multi-threaded scanning • Concurrent DNS resolution • Efficient resource utilization • Smart timeout handling
+
+### 🔒 Security Focus
+Header analysis • SSL validation • Vulnerability identification • Information disclosure detection
+
+### 📈 Comprehensive Reporting
+Markdown reports • JSON export • Timestamped results • Structured data output
+
+### 🌈 User Experience
+Colorized output • Interactive menus • Progress indicators • Error handling
+
+</div>
+
+---
+
+## ⚠️ Legal & Ethical Use
+
+**IMPORTANT**: This tool is designed for authorized security testing only. Users must:
+
+- ✅ Only test systems you own or have explicit permission to test
+- ✅ Comply with applicable laws and regulations
+- ✅ Use responsibly for legitimate security research
+- ❌ Never use for unauthorized access or malicious purposes
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these guidelines:
+
+### Development Process
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Code Standards
+- Follow PEP 8 Python style guidelines
+- Add comprehensive comments and docstrings
+- Include unit tests for new features
+- Update documentation as needed
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🔗 Resources
+
+<div align="center">
+
+[![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/niladri-1/WebRecon)
+[![Issues](https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github)](https://github.com/niladri-1/WebRecon/issues)
+[![Releases](https://img.shields.io/badge/GitHub-Releases-green?style=for-the-badge&logo=github)](https://github.com/niladri-1/WebRecon/releases)
+[![Wiki](https://img.shields.io/badge/GitHub-Wiki-blue?style=for-the-badge&logo=github)](https://github.com/niladri-1/WebRecon/wiki)
+
+</div>
+
+---
+
+<div align="center">
+
+### ⭐ Support WebRecon
+
+If you find this tool valuable, please consider starring the repository!
+
+[![GitHub stars](https://img.shields.io/github/stars/niladri-1/WebRecon?style=social&label=Star&maxAge=2592000)](https://github.com/niladri-1/WebRecon/stargazers)
+
+**Made with ❤️ by [niladri-1](https://github.com/niladri-1)**
+
+</div>
