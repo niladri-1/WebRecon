@@ -4,13 +4,14 @@
 
 ---
 
-## ⚙️ Installation
+<div align="center">
+  <img src="./preview_img.png" alt="Project_preview" width="700">
+  <p><i>WebRecon interface with colorful output and interactive menu</i></p>
+</div>
 
-### 🧰 System Requirements
+## ⚙️ Installation & Run
 
-Ensure you are running **Kali Linux** or a Debian-based system with the following tools installed.
-
-#### 1. Install All Tools (Non-Python)
+### 🧰 Install Requirements
 
 ```bash
 sudo apt update && sudo apt upgrade -y
