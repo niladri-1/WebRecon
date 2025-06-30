@@ -1,10 +1,27 @@
-# <div align="center"> 🔍 VulnHawk - Advanced Web Reconnaissance Toolkit </div>
-
 <div align="center">
+
+# 🔍 VulnHawk - Advanced Web Reconnaissance Toolkit
 
 [![Python Version](https://img.shields.io/badge/python-3.6+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Security](https://img.shields.io/badge/security-ethical%20hacking-red.svg)](README.md)
+[![GitHub Stars](https://img.shields.io/github/stars/niladri-1/VulnHawk?style=social)](https://github.com/niladri-1/VulnHawk/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/niladri-1/VulnHawk?style=social)](https://github.com/niladri-1/VulnHawk/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/niladri-1/VulnHawk)](https://github.com/niladri-1/VulnHawk/issues)
+[![GitHub Watchers](https://img.shields.io/github/watchers/niladri-1/VulnHawk?style=social)](https://github.com/niladri-1/VulnHawk/watchers)
+[![Code Size](https://img.shields.io/github/languages/code-size/niladri-1/VulnHawk)](https://github.com/niladri-1/VulnHawk)
+[![Last Commit](https://img.shields.io/github/last-commit/niladri-1/VulnHawk)](https://github.com/niladri-1/VulnHawk/commits/main)
+
+
+
+[![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)](https://www.linux.org/)
+[![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![Cybersecurity](https://img.shields.io/badge/Cybersecurity-FF6B35?style=flat&logo=security&logoColor=white)](https://github.com/topics/cybersecurity)
+[![Penetration Testing](https://img.shields.io/badge/Penetration%20Testing-DC143C?style=flat&logo=kali-linux&logoColor=white)](https://www.kali.org/)
+[![OSINT](https://img.shields.io/badge/OSINT-4B0082?style=flat&logo=searchengineland&logoColor=white)](https://github.com/topics/osint)
+[![Web Security](https://img.shields.io/badge/Web%20Security-FF4500?style=flat&logo=mozilla&logoColor=white)](https://github.com/topics/web-security)
+[![Network Security](https://img.shields.io/badge/Network%20Security-228B22?style=flat&logo=cisco&logoColor=white)](https://github.com/topics/network-security)
 
 **A comprehensive reconnaissance framework for ethical penetration testing and security research**
 
@@ -360,11 +377,9 @@ This toolkit integrates the following open-source security tools:
 
 <div align="center">
 
-### Need Help?
-
-[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?logo=github)](https://github.com/niladri-1/VulnHawk-tool/issues)
-[![Documentation](https://img.shields.io/badge/Read-Documentation-blue?logo=gitbook)](README.md)
-[![Community](https://img.shields.io/badge/Join-Community-green?logo=discord)](https://discord.gg/yourinvite)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=flat&logo=todoist&logoColor=white)](https://niladri1.vercel.app)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:code.niladri+support@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/niladri1)
 
 **Made with ❤️ by the cybersecurity community**
 
